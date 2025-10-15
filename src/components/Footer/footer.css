@@ -4,12 +4,13 @@
     color: #C12535;
 }
 
-.footer-links p{
+.footer-links-link{
     font-size: 1.5rem;
     color: #C12535;
     cursor: pointer;
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .footer-links p:hover {
