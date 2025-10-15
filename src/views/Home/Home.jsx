@@ -15,7 +15,7 @@ return (
             <div className="home-center">
                     <Link to="/menu">MENU</Link>
                     <img className="spongebob" src={spongebob} alt="Spongebob" style={{ width: "20rem" }}/>
-
+                    <Link to="/order">ORDER</Link>
             </div>
 
     </div>);
