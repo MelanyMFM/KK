@@ -1,20 +1,36 @@
 import { Home } from './views/Home/Home';
 import { Menu } from './views/Menu/Menu';
 import { Order } from './views/Order/Order';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'
 
-function App() {
- 
+function PageWrapper({ children, locationKey }) {
+  // we use a keyed div so React will remount the page on route change,
+  // allowing CSS animations on mount/unmount.
+  return (
+    <div className="page-wrapper" key={locationKey}>
+      {children}
+    </div>
+  )
+}
+
+function AnimatedRoutes() {
+  const location = useLocation()
 
   return (
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<PageWrapper locationKey={location.pathname}><Home /></PageWrapper>} />
+      <Route path="/menu" element={<PageWrapper locationKey={location.pathname}><Menu /></PageWrapper>} />
+      <Route path="/order" element={<PageWrapper locationKey={location.pathname}><Order /></PageWrapper>} />
+    </Routes>
+  )
+}
+
+function App() {
+  return (
     <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/menu" element={<Menu />} />
-                <Route path="/order" element={<Order />} />
-            </Routes>
-        </Router>
+      <AnimatedRoutes />
+    </Router>
   )
 }
 

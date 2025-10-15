@@ -3,6 +3,8 @@
 export function Order() {
 
     return(
-        <p>orden</p>
+        <div className="page">
+            <p>orden</p>
+        </div>
     );
 }

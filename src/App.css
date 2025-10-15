@@ -1,0 +1,18 @@
+/* Page transition: short fade + subtle vertical slide */
+.page-wrapper {
+	animation: pageIn 260ms cubic-bezier(.22,.9,.32,1);
+}
+
+@keyframes pageIn {
+	0% { opacity: 0; transform: translateY(8px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: when you want an exit animation, you can toggle a class before unmounting.
+	 For this simple approach we only animate on mount (fast and smooth). */
+
+/* Ensure pages expand to full height and avoid layout shift */
+.page {
+	min-height: 70vh;
+}
+
