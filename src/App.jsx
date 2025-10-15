@@ -1,7 +1,7 @@
 import { Home } from './views/Home/Home';
 import { Menu } from './views/Menu/Menu';
 import { Order } from './views/Order/Order';
-import MenuItemDetail from './components/MenuItemDetail/MenuItemDetail';
+import MenuItemDetail from './views/MenuItemDetail/MenuItemDetail';
 import Cart from './views/Cart/Cart';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'

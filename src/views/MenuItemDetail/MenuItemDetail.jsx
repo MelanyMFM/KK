@@ -1,5 +1,6 @@
 import { useParams, useLocation, Link, useNavigate } from 'react-router-dom'
 import menuMocks from '../../data/menuMocks'
+import { Header } from '../../components/Header/Header'
 
 
 export function MenuItemDetail(){
@@ -47,24 +48,29 @@ export function MenuItemDetail(){
   })()
 
   return (
-    <div className="page fondo-container menu-detail">
-      <Link to="/menu" className="back-link">← Back</Link>
-      <div className="menu-detail-card">
-        <img src={item.image || '/src/assets/kk_icon.png'} alt={item.name} />
-        <div className="menu-detail-meta">
-          <h2>{item.name}</h2>
-          <p className="price">${item.price.toFixed(2)}</p>
-          <p className="desc">{item.description}</p>
-          <div>
-            {inCart ? (
-              <button className="view-cart" onClick={()=> navigate('/cart')}>Ver carrito</button>
-            ) : (
-              <button className="add-to-cart" onClick={addToCart}>Agregar al carrito</button>
-            )}
+
+    <>
+      <Header />
+      <div className="page fondo-container menu-detail">
+        <Link to="/menu" className="back-link">← Back</Link>
+        <div className="menu-detail-card">
+          <img src={item.image || '/src/assets/kk_icon.png'} alt={item.name} />
+          <div className="menu-detail-meta">
+            <h2>{item.name}</h2>
+            <p className="price">${item.price.toFixed(2)}</p>
+            <p className="desc">{item.description}</p>
+            <div>
+              {inCart ? (
+                <button className="view-cart" onClick={()=> navigate('/cart')}>Ver carrito</button>
+              ) : (
+                <button className="add-to-cart" onClick={addToCart}>Agregar al carrito</button>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
+    
   )
 }
 
