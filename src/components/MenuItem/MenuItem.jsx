@@ -1,30 +1,22 @@
 
 import { useNavigate } from 'react-router-dom';
+import placeholder from '../../assets/kk_icon.png'
 
-function Emprendimiento({props}){
-    const navigate = useNavigate();
+export default function MenuItem({ item }){
+    const navigate = useNavigate()
 
-    const viewWindow = () => {
-        navigate(`/Emprendimientos/${props.id}`, { state: { props: props } });
+    const goToDetail = () => {
+        navigate(`/menu/${item.id}`, { state: { item } })
     }
 
-    return(
-        <div className='emprendimiento-container'>
-            <p className='nombre-emprendimiento' onClick={viewWindow}>{props.nombre}</p>
-            <div className='usuario-y-ciudad'>
-                <p className='usuario-emprendimiento'>{props.usuario}</p>
-                <p className='ciudad-emprendimiento'>{props.ciudad}</p>
-            </div>
-            <img src={props.img} onClick={viewWindow} alt="imagen del emprendimiento"/>
-            <div className='descripcion-y-rating'>
-                <p className='descripcion-emprendimiento'>{props.descripcion}</p>
-                <div className='calificacion-y-mas'>
-                    <Calificacion rating={props.calificacion}/>
-                    <p className='more-vista' onClick={viewWindow}>MORE</p>
-                </div>
+    return (
+        <div className="menu-item" onClick={goToDetail} style={{cursor: 'pointer'}}>
+            <img src={item.image || placeholder} alt={item.name} style={{width: '8rem', height: '8rem', objectFit: 'cover', borderRadius: 8}}/>
+            <div className="menu-item-meta">
+                <h3>{item.name}</h3>
+                <p className="menu-item-price">${item.price.toFixed(2)}</p>
+                <p className="menu-item-desc">{item.description}</p>
             </div>
         </div>
     )
 }
-
-export default Emprendimiento;

@@ -1,6 +1,8 @@
 import { Home } from './views/Home/Home';
 import { Menu } from './views/Menu/Menu';
 import { Order } from './views/Order/Order';
+import MenuItemDetail from './components/MenuItemDetail/MenuItemDetail';
+import Cart from './views/Cart/Cart';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'
 
@@ -20,8 +22,10 @@ function AnimatedRoutes() {
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<PageWrapper locationKey={location.pathname}><Home /></PageWrapper>} />
-      <Route path="/menu" element={<PageWrapper locationKey={location.pathname}><Menu /></PageWrapper>} />
-      <Route path="/order" element={<PageWrapper locationKey={location.pathname}><Order /></PageWrapper>} />
+  <Route path="/menu" element={<PageWrapper locationKey={location.pathname}><Menu /></PageWrapper>} />
+    <Route path="/menu/:id" element={<PageWrapper locationKey={location.pathname}><MenuItemDetail /></PageWrapper>} />
+    <Route path="/cart" element={<PageWrapper locationKey={location.pathname}><Cart /></PageWrapper>} />
+    <Route path="/order" element={<PageWrapper locationKey={location.pathname}><Order /></PageWrapper>} />
     </Routes>
   )
 }
