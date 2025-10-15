@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.home-title{
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  letter-spacing: 0.125em; 
+  font-size: 5rem;
+  color: #C12535;
+  text-shadow: 
+    -1px -1px 0 black,  /* Arriba-Izquierda */
+     1px -1px 0 black,  /* Arriba-Derecha */
+    -1px  1px 0 black,  /* Abajo-Izquierda */
+     1px  1px 0 black;  /* Abajo-Derecha */
+}
+
+.home-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .fondo-container{
   background-color: beige;
   min-height: 80%;
