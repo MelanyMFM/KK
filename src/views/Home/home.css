@@ -1,0 +1,8 @@
+.fondo-container{
+  background-color: beige;
+  min-height: 80%;
+  min-width: 90%;
+  max-width: 90%;
+  border-radius: 25px;
+  margin: 0 auto;
+}

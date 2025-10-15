@@ -1,9 +1,12 @@
-
-
+import "./home.css"
+import { Header } from "../../components/Header/Header";
 
 export function Home() {
 
 
 
-  return <h1>Home</h1>;
+  return <div>
+    <Header/>
+
+    </div>;
 }
