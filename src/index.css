@@ -11,14 +11,16 @@ html, body, #root {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* allow vertical scrolling when content is taller than the viewport */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smoother scrolling on mobile */
 }
 
 #root {
   background-image: url("src/assets/fondo.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 
