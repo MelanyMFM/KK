@@ -33,3 +33,28 @@ html, body, #root {
   margin: 0 auto;
 }
 
+/* la scrollbar*/
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #e6f0ff 0%, #dff1ff 100%); /* light blue track */
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #007bff 0%, #ff0033 100%); /* blue to red */
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.25);
+}
+*::-webkit-scrollbar-thumb:hover {
+  filter: brightness(0.9);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #e6f0ff; /* thumb color, track color */
+}
+
+
