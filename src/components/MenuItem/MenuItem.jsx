@@ -1,4 +1,4 @@
-
+import "./menuItem.css"
 import { useNavigate } from 'react-router-dom';
 import placeholder from '../../assets/kk_icon.png'
 
@@ -15,7 +15,7 @@ export default function MenuItem({ item }){
             <div className="menu-item-meta">
                 <h3>{item.name}</h3>
                 <p className="menu-item-price">${item.price.toFixed(2)}</p>
-                <p className="menu-item-desc">{item.description}</p>
+               
             </div>
         </div>
     )

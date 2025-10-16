@@ -21,10 +21,10 @@ export function Menu(){
                 </div>
 
                 <div className="page fondo-container menu-page">
-                    <Link to="/cart">
+                    <Link to="/cart" className='menu-cart'>
                         <img className='carrito' src={carrito} alt="Carrito" />
                     </Link>
-                    <h1>Menu</h1>
+                    <p className='title1'>MENU</p>
                     <div className="menu-list">
                         {menuMocks.map(item => (
                             <MenuItem key={item.id} item={item} />

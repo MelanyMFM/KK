@@ -1,0 +1,17 @@
+.menu-cart {
+    position: absolute;
+    right: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-cart:hover {
+    transform: scale(1.1);
+}
+.menu-cart img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+}
