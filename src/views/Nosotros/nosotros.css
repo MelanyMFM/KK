@@ -1,0 +1,48 @@
+
+.nosotros-page{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2.5rem;
+}
+.nosotros-info{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nosotros-info p{
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.2;
+    width: 28rem;    
+}
+
+.nosotros-mapa{
+   width: 30rem;
+}
+
+.nosotros-address{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+}
+
+.nosotros-kkrab{
+    width: 25rem;
+}
+
+.nosotros-address-text{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.2;
+    width: 28rem;   
+}

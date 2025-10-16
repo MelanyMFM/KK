@@ -1,6 +1,7 @@
 import { Home } from './views/Home/Home';
 import { Menu } from './views/Menu/Menu';
 import { Order } from './views/Order/Order';
+import { Nosotros } from './views/Nosotros/Nosotros';
 import MenuItemDetail from './views/MenuItemDetail/MenuItemDetail';
 import Cart from './views/Cart/Cart';
 import { FQuestions } from './views/FQuestions/FQuestions';
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
       <Route path="/cart" element={<PageWrapper locationKey={location.pathname}><Cart /></PageWrapper>} />
       <Route path="/order" element={<PageWrapper locationKey={location.pathname}><Order /></PageWrapper>} />
       <Route path="/fquestions" element={<PageWrapper locationKey={location.pathname}><FQuestions /></PageWrapper>} />
+      <Route path="/nosotros" element={<PageWrapper locationKey={location.pathname}><Nosotros /></PageWrapper>} />
     </Routes>
   )
 }

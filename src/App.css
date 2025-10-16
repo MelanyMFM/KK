@@ -14,6 +14,11 @@
 /* Ensure pages expand to full height and avoid layout shift */
 .page {
 	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem 0;
+	gap: 1rem;
 }
 .title1{
 	font-family: 'Irish Grover', cursive;

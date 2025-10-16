@@ -7,7 +7,7 @@ export function Footer(){
         <div>
             <div className="footer-links">
                 <Link to="fquestions" className="footer-links-link">Preguntas Frecuentes</Link>
-                <p className="footer-links-link">Sobre Nosotros</p>
+                <Link to="nosotros" className="footer-links-link">Sobre Nosotros</Link>
             </div>
             <p className="footer-message">
                 Marca registrada y derechos de 2025 Crustáceo Cascarudo® Corporation. 
