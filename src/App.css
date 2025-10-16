@@ -15,4 +15,16 @@
 .page {
 	min-height: 70vh;
 }
+.title1{
+	  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  letter-spacing: 0.125em; 
+  font-size: 3rem;
+  color: #C12535;
+  text-shadow: 
+	-1px -1px 0 black,  /* Arriba-Izquierda */
+	 1px -1px 0 black,  /* Arriba-Derecha */
+	-1px  1px 0 black,  /* Abajo-Izquierda */
+	 1px  1px 0 black;  /* Abajo-Derecha */
 
+}

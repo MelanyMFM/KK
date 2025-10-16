@@ -1,40 +1,12 @@
 import "./fquestions.css"
 import { Header } from "../../components/Header/Header"
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import faqMocks from '../../data/faqMocks'
+import AccordionItem from '../../components/AccordionItem/AccordionItem'
+import alga1 from "../../assets/alga1.png"
+import alga2 from "../../assets/alga2.png"
+import burbujas from "../../assets/burbujas.png"
 
-function AccordionItem({ item, isOpen, onToggle }){
-    const contentRef = useRef(null)
-
-    useEffect(()=>{
-        const el = contentRef.current
-        if(!el) return
-        if(isOpen){
-            // set to scrollHeight so CSS transition animates max-height
-            el.style.maxHeight = el.scrollHeight + 'px'
-            el.style.paddingTop = '0.75rem'
-            el.style.paddingBottom = '0.75rem'
-            el.style.opacity = '1'
-        } else {
-            el.style.maxHeight = '0px'
-            el.style.paddingTop = '0'
-            el.style.paddingBottom = '0'
-            el.style.opacity = '0'
-        }
-    }, [isOpen])
-
-    return (
-        <div className={`faq-item ${isOpen ? 'open' : ''}`}>
-            <button className="faq-question" aria-expanded={isOpen} onClick={onToggle}>
-                <span className="q-text">{item.question}</span>
-                <span className="q-toggle">{isOpen ? '-' : '+'}</span>
-            </button>
-            <div ref={contentRef} className="faq-answer" role="region" aria-hidden={!isOpen}>
-                <div className="faq-answer-inner">{item.answer}</div>
-            </div>
-        </div>
-    )
-}
 
 export function FQuestions() {
     const [openId, setOpenId] = useState(null)
@@ -44,14 +16,23 @@ export function FQuestions() {
     return(
         <>
             <Header/>
-            <div className="page fondo-container fquestions-page">
-                <h1>Preguntas frecuentes</h1>
+            <div className="page-wrap">
+                <div className="fondo-decoracion">
+                    <img className="alga1" src={alga1} alt="Alga" draggable="false" style={{ width: "12rem", position: "absolute", top: "-2rem", left: "2rem" }}/>
+                    <img className="alga2" src={alga2} alt="Alga" draggable="false" style={{ width: "12rem", position: "absolute", bottom: "0rem", right: "2rem" }}/>
+                    <img className="burbujas" src={burbujas} alt="Burbujas" draggable="false" style={{ width: "10rem", position: "absolute", top: "70%", left: "0" }}/>
+                </div>
+
+                 <div className="page fondo-container fquestions-page">
+                <p className="title1">FREQUENT QUESTIONS</p>
                 <div className="faq-list">
                     {faqMocks.map(f => (
                         <AccordionItem key={f.id} item={f} isOpen={openId === f.id} onToggle={() => toggle(f.id)} />
                     ))}
                 </div>
             </div>
+            </div>
+           
         </>
     )
 }
