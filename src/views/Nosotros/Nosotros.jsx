@@ -17,7 +17,7 @@ export function Nosotros() {
                     <img className="alga1" src={alga1} alt="Alga" draggable="false" 
                         style={{ width: "12rem", position: "absolute", top: "-2rem", left: "2rem" }}/>
                     <img className="alga2" src={alga2} alt="Alga" draggable="false" 
-                        style={{ width: "12rem", position: "absolute", bottom: "0rem", right: "2rem" }}/>
+                        style={{ width: "12rem", position: "absolute", bottom: "50%", right: "2rem" }}/>
                     <img className="burbujas" src={burbujas} alt="Burbujas" draggable="false" 
                         style={{ width: "10rem", position: "absolute", top: "70%", left: "0" }}/>
                 </div>

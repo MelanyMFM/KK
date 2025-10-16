@@ -46,3 +46,10 @@
     line-height: 1.2;
     width: 28rem;   
 }
+
+@media (max-width: 768px) {
+    .nosotros-info,
+    .nosotros-address {
+        flex-direction: column;
+    }
+}
